@@ -17,13 +17,9 @@ $(document).ready(function () {
   var typing = new Typed(".typing", {
     strings: [
       "Cybersecurity Enthusiast",
-      "Ethical Hacker",
       "Network Defender",
-      "Malware Analyst",
-      "Penetration Tester",
       "Security Researcher",
       "Digital Forensics Expert",
-      "Bug Bounty Hunter",
       "Threat Analyst",
       "Future Cybersecurity Specialist",
     ],
