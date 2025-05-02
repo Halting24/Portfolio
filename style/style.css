@@ -3,6 +3,12 @@
   --secondary-color: white; /* Secondary grey */
   /* Success green */
 }
+body {
+  font-family: "Poppins", sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
 .contact-form-container {
   background-color: #ffffff; /* White background for the form area */
   padding: 30px;
@@ -158,4 +164,34 @@
 .navbar.visible {
   visibility: visible;
   opacity: 1;
+}
+
+.text-xl {
+  /* Equivalent to fs-1 (40px) */
+  font-size: 40px;
+}
+
+.text-lg {
+  /* Equivalent to fs-2 (32px) */
+  font-size: 32px;
+}
+
+.text-md {
+  /* Equivalent to fs-3 (28px) */
+  font-size: 28px;
+}
+
+.text-sm {
+  /* Equivalent to fs-4 (24px) */
+  font-size: 24px;
+}
+
+.text-xs {
+  /* Equivalent to fs-5 (20px) */
+  font-size: 20px;
+}
+
+.text-xxs {
+  /* Equivalent to fs-6 (16px) */
+  font-size: 16px;
 }
