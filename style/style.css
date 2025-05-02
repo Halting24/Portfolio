@@ -87,7 +87,12 @@
   --bs-gutter-y: 1rem; /* Add vertical gutter */
 }
 .bg-white {
-  background-color: white !important; /* Ensure white background for the form */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ) !important; /* White with 80% opacity */
 }
 .hero-section {
   height: 70vh; /* Full viewport height */
@@ -109,7 +114,10 @@
 .main-title {
   font-size: 4rem;
   font-weight: 700;
-  color: var(--primary-color);
+}
+.sub-title {
+  font-size: 2.5rem;
+  font-weight: 700;
 }
 .description {
   font-size: 1.2rem;
