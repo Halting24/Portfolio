@@ -121,6 +121,10 @@ html {
   font-size: 4rem;
   font-weight: 700;
 }
+.main2-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
 .sub-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -194,4 +198,23 @@ html {
 .text-xxs {
   /* Equivalent to fs-6 (16px) */
   font-size: 16px;
+}
+.container-padding {
+  padding-top: 240px;
+}
+.custom-line {
+  border: none;
+  border-top: 2px solid #b0b0b0; /* Light grey color */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.d-flex.justify-content-lg-start {
+  justify-content: flex-start;
+}
+
+/* Medium screens and below: Justify content to the center */
+@media (max-width: 991.98px) {
+  .d-flex.justify-content-lg-start {
+    justify-content: center;
+  }
 }
