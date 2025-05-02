@@ -29,12 +29,12 @@
       src="https://kit.fontawesome.com/042ca64352.js"
       crossorigin="anonymous"
     ></script>
-    
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
     />
-
+    <link rel="stylesheet" href="style/style.css" />
     <link
       rel="stylesheet"
       href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css"
@@ -47,74 +47,172 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="row contact-formation padding-top-contact">
+    <nav class="sticky-top navbar navbar-expand-lg shadow bg-white">
+      <div class="container">
+        <h3 class="primary-color">Kabir Suri</h3>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto text-end">
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-black" aria-current="page" href="#"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-black" href="#">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fs-5 text-black" href="#">Pricing</a>
+            </li>
+          </ul>
+        </div>
       </div>
-    </div>
+    </nav>
 
     <div class="container">
-      <div class="row justify-content-center padding-botton-contact">
-        <div class="col-lg-6 col-md-10">
-          <div class="row">
-            <div class="col-md-12">
-              <label for="txtName" class="form-label text-white fs-5"></label>
-              <input
-                type="text"
-                class="form-control input-font"
-                name="name"
-                id="txtName"
-                placeholder="Name *"
-                required
-              />
-            </div>
-            <div class="col-md-12">
-              <label for="txtEmail" class="form-label text-white fs-5"></label>
-              <input
-                type="email"
-                class="form-control input-font"
-                name="email"
-                id="txtEmail"
-                placeholder="Email *"
-                required
-              />
-            </div>
-            <div class="col-md-12">
-              <label for="txtPhone" class="form-label text-white fs-5"></label>
-              <input
-                type="text"
-                class="form-control input-font"
-                name="phone"
-                placeholder="Phone Number *"
-                id="txtPhone"
-              />
-            </div>
-            <div class="col-md-12">
-              <label for="txtReview" class="form-label text-white fs-5"></label>
-              <textarea
-                class="form-control input-font"
-                name="Leave&nbsp;a&nbsp;Quote"
-                id="txtQuote"
-                rows="4"
-                placeholder="Tell Us What you Would Like!*"
-                required
-              ></textarea>
-            </div>
-            <div class="col-md-12 mt-4 text-center">
-              <a
-                type="button"
-                class="btn btn-primary text-white btn-lg fs-4 input-font"
-                id="btnSubmit"
-                >Submit</a
-              >
-            </div>
+      <div class="row align-items-center mt-5">
+        <div class="col-12 hero-section">
+          <div>
+            <span class="fs-3 typing grey"></span>
+            <br />
+            <span class="main-title">Kabir Suri</span> <br />
+            <span class="fs-3"
+              >I make it work, make it right, and make it fast</span
+            >
           </div>
         </div>
       </div>
     </div>
 
-    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+          <p class="fs-3 grey">// Portfolio</p>
+          <div class="arrow">
+            <a href="#portfolio-section">
+              <i class="bi bi-arrow-down"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="portfolio-section" class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-7 col-md-9">
+          <div class="contact-form-container">
+            <h2 class="contact-form-title">Contact Us</h2>
+            <form id="contactForm">
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      id="txtName"
+                      required
+                    />
+                    <label for="txtName">FULL NAME *</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      id="txtEmail"
+                      required
+                    />
+                    <label for="txtEmail">EMAIL *</label>
+                  </div>
+                </div>
+
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input
+                      type="tel"
+                      class="form-control"
+                      name="phone"
+                      id="txtPhone"
+                      required
+                    />
+                    <label for="txtPhone">PHONE *</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <select
+                      class="form-select"
+                      id="txtInquiry"
+                      name="txtInquiry"
+                      required
+                      aria-label="Needed Services Select"
+                    >
+                      <option selected disabled value="">Please choose</option>
+                      <option value="General Inquiry">General Inquiry</option>
+                      <option value="Job Opportunity">Job Opportunity</option>
+                      <option value="Project Collaboration">
+                        Project Collaboration
+                      </option>
+                      <option value="Resume Review">Resume Review</option>
+                      <option value="Mentorship Request">
+                        Mentorship Request
+                      </option>
+                      <option value="Cybersecurity Consultation">
+                        Cybersecurity Consultation
+                      </option>
+                      <option value="Other">Other</option>
+                    </select>
+                    <label for="txtInquiry">REASON FOR CONTACT *</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <div class="form-floating">
+                    <textarea
+                      class="form-control"
+                      name="txtQuote"
+                      id="txtQuote"
+                      required
+                      style="height: 120px"
+                    ></textarea>
+                    <label for="txtQuote">MESSAGE *</label>
+                  </div>
+                </div>
+
+                <div class="col-md-12 mt-3">
+                  <button
+                    type="submit"
+                    class="btn btn-primary btn-lg"
+                    id="btnSubmit"
+                  >
+                    Submit <i class="bi bi-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/script.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.1.0/typed.umd.js"></script>
 
     <script src="
     //cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
