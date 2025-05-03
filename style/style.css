@@ -1,82 +1,33 @@
 :root {
-  --primary-color: red; /* Primary blue */
+  --primary-color: rgb(252, 16, 16); /* Primary blue */
+  --primary-color-opacity: rgb(252, 16, 16, 0.1); /* Primary blue */
   --secondary-color: white; /* Secondary grey */
-  /* Success green */
+  --black-color: rgb(24, 23, 23);
 }
 body {
   font-family: "Poppins", sans-serif;
+  background-color: var(--black-color);
 }
 html {
   scroll-behavior: smooth;
 }
-.contact-form-container {
-  background-color: #ffffff; /* White background for the form area */
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.contact-form-title {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-weight: bold;
-  color: #333;
-}
-
-/* Style for floating labels */
-.form-floating > .form-control,
-.form-floating > .form-select {
-  background-color: #f8f9fa; /* Light grey background for inputs */
-  border: none; /* Remove default borders */
-  border-radius: 0.375rem; /* Standard Bootstrap rounding */
-  height: calc(3.5rem + 2px); /* Adjust height if needed */
-  line-height: 1.25;
-}
-.form-floating > .form-control:focus,
-.form-floating > .form-select:focus {
-  background-color: #f8f9fa;
-  box-shadow: none; /* Remove focus glow */
-  /* Optionally add a subtle border on focus */
-  /* border: 1px solid #ced4da; */
-}
-
-.form-floating > label {
-  color: #6c757d; /* Grey color for label */
-  padding: 1rem 0.75rem;
-}
-
-/* Specific styling for textarea */
-.form-floating > textarea.form-control {
-  height: 120px; /* Adjust height as needed */
-  line-height: 1.5; /* Improve readability */
-}
-
-.form-floating > .form-control::placeholder {
-  /* Style placeholder if needed, though floating labels hide it */
-  color: #6c757d;
-  opacity: 1;
-}
-
-/* Adjust spacing */
-.form-floating {
-  margin-bottom: 1rem; /* Add space below each field */
-}
 
 /* Submit Button Styling */
 #btnSubmit {
-  background-color: #212529; /* Dark background */
+  background-color: var(--primary-color); /* Dark background */
   border: none;
   color: white;
   padding: 0.75rem 1.5rem;
   font-size: 1rem; /* Adjust font size */
   border-radius: 0.375rem; /* Match input rounding */
   width: 100%; /* Full width */
-  transition: background-color 0.2s ease-in-out;
+  transition: transform 0.5s ease;
   text-align: center;
 }
 
 #btnSubmit:hover {
-  background-color: #343a40; /* Slightly lighter on hover */
+  transform: scale(1.05); /* Slightly grow the button */
+  /* Slightly lighter on hover */
 }
 
 #btnSubmit i {
@@ -92,11 +43,11 @@ html {
 .contact-form-container .row {
   --bs-gutter-y: 1rem; /* Add vertical gutter */
 }
-.bg-white {
+.bg-color {
   background-color: rgba(
-    255,
-    255,
-    255,
+    26,
+    25,
+    25,
     0.9
   ) !important; /* White with 80% opacity */
 }
@@ -105,6 +56,10 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+.nav-link:hover {
+  color: var(--primary-color); /* Change color on hover */
+  text-decoration: none; /* Remove underline */
 }
 .primary-color {
   color: var(--primary-color); /* Use primary color for text */
@@ -135,7 +90,7 @@ html {
   font-weight: 400;
 }
 .grey {
-  color: #8c8c8c;
+  color: #9a9898;
 }
 .dark-grey {
   color: #5c5c5c; /* Dark grey for better contrast */
@@ -203,7 +158,7 @@ html {
   font-size: 16px;
 }
 .container-padding {
-  padding-top: 240px;
+  padding-top: 210px;
 }
 .custom-line {
   border: none;
@@ -228,8 +183,10 @@ html {
   }
 }
 .card {
+  background-color: var(--black-color);
   transform: scale(1); /* Default size */
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.5s ease; /* Smooth transition */
+  border: 1px solid #7c7c7c; /* Light grey border */
 }
 
 .card:hover {
@@ -237,4 +194,169 @@ html {
 }
 .skill-list {
   font-size: 13px;
+}
+.card {
+  border-radius: 0px;
+  overflow: hidden;
+}
+.card:hover {
+  border-color: var(--primary-color);
+}
+.card-red {
+  overflow: hidden;
+  position: relative;
+  border-bottom: 4px solid var(--primary-color); /* Add a bottom border with the primary color */
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 0px;
+}
+
+.modal-content {
+  height: 75vh; /* 90% of the viewport height */
+  background-color: var(--black-color); /* Dark background for the modal */
+}
+.modal-body img {
+  max-width: 100%; /* Ensure the image doesn't exceed the modal width */
+  max-height: 400px; /* Limit the height of the image */
+  object-fit: contain; /* Ensure the image scales properly without distortion */
+  margin: 0 auto; /* Center the image horizontally */
+  display: block; /* Ensure proper centering */
+}
+.modal-body {
+  max-height: 65vh; /* 80% of the viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+}
+.modal-header {
+  border-bottom: none; /* Remove the default border */
+  position: relative; /* Ensure the pseudo-element is positioned relative to the header */
+}
+
+.modal-header h5::after {
+  content: ""; /* Add an empty line */
+  display: block;
+  width: 100%; /* Match the width of the title */
+  height: 2px; /* Adjust the thickness of the line */
+  background-color: var(--primary-color); /* Use the primary color */
+  margin-top: 0; /* Add spacing between the title and the line */
+}
+.btn-close {
+  color: white; /* Darker color for the close icon */
+  font-weight: 900; /* Increase font weight */
+  opacity: 1;
+  text-decoration: none;
+  /* Ensure the icon is fully visible */
+}
+.btn-close:focus {
+  outline: none; /* Remove the blue focus outline */
+  box-shadow: none; /* Remove any additional focus shadow */
+}
+.text-color {
+  color: white;
+}
+.skill-box {
+  background-color: var(
+    --primary-color-opacity
+  ); /* Lightened primary color for the background */
+  color: var(--primary-color); /* Primary color for the text */
+  padding: 5px 10px; /* Adjust padding to make it slightly larger than the text */
+  margin-bottom: 5px; /* Reduce spacing between boxes */
+  border-radius: 4px; /* Slightly rounded corners */
+  text-align: center; /* Center the text */ /* Ensure the box wraps tightly around the text */
+  font-weight: 500; /* Slightly bold text */
+}
+.modal-body::-webkit-scrollbar {
+  width: 8px; /* Set scrollbar width */
+}
+
+.modal-body::-webkit-scrollbar-thumb {
+  background-color: #9a9898; /* Black scrollbar thumb */
+  border-radius: 4px; /* Rounded corners for the scrollbar */
+}
+
+.modal-body::-webkit-scrollbar-track {
+  background-color: #333; /* Dark grey scrollbar track */
+}
+.custom-close-btn {
+  background-color: transparent; /* Remove background */
+  border: none; /* Remove border */
+  color: white; /* Set the icon color */
+  font-size: 1.5rem; /* Adjust icon size */
+  position: absolute; /* Position it in the top-right corner */
+  top: 10px; /* Adjust vertical position */
+  right: 10px; /* Adjust horizontal position */
+  cursor: pointer; /* Change cursor to pointer */
+}
+/* Modern Form Styling */
+
+.modern-form-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.form-control::placeholder {
+  color: white;
+  opacity: 1; /* Ensure the placeholder is fully visible */
+}
+.modern-input {
+  margin-bottom: 1.5rem;
+}
+
+.modern-label {
+  display: block;
+  font-size: 0.9rem;
+  color: #bbb;
+  margin-bottom: 0.5rem;
+}
+
+.modern-input .form-control,
+.modern-input .form-select {
+  background-color: #333;
+  color: white;
+  border: 1px solid var(--primary-color-opacity);
+  border-radius: 5px;
+  padding: 15px;
+  transition: all 0.3s ease;
+}
+
+.modern-input .form-control:focus,
+.modern-input .form-select:focus {
+  background-color: #444;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 10px var(--primary-color);
+}
+
+.modern-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.modern-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: scale(1.05);
+}
+
+.modern-btn i {
+  margin-left: 10px;
+}
+.modern-btn:disabled {
+  background-color: var(--primary-color); /* Retain primary color */
+  opacity: 0.8; /* Slightly dim to indicate disabled state */
+  cursor: not-allowed;
+  color: white;
+}
+.form-border {
+  border: 1px solid #7c7c7c; /* Light grey border */
+  /* Rounded corners for a modern look */
+  padding: 30px; /* Add padding inside the border */
 }

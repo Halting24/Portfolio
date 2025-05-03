@@ -1,11 +1,11 @@
 $(document).ready(function () {
-  $("#btnSubmit").click(function () {
-    event.preventDefault();
-    var name = $("#txtName").val();
-    var email = $("#txtEmail").val();
-    var phone = $("#txtPhone").val();
-    var quote = $("#txtQuote").val();
-    var inquiry = $("#txtInquiry").val();
+  $("#modernBtnSubmit").click(function (event) {
+    event.preventDefault(); // Prevent default form submission
+    var name = $("#modernTxtName").val();
+    var email = $("#modernTxtEmail").val();
+    var phone = $("#modernTxtPhone").val();
+    var quote = $("#modernTxtQuote").val();
+    var inquiry = $("#modernTxtInquiry").val();
 
     var valResult = valInputData(name, email, phone, quote, inquiry);
 
@@ -13,14 +13,14 @@ $(document).ready(function () {
       return;
     }
 
-    $("#btnSubmit").prop("disabled", true).html("Sending..."); // Change button text to "Sending..."
+    $("#modernBtnSubmit").prop("disabled", true).html("Sending...");
     postQuote(name, email, phone, quote, inquiry);
   });
 });
 
 function valInputData(name, email, phone, quote, inquiry) {
   var err = "";
-  if (isEmpty(name) == true) {
+  if (isEmpty(name)) {
     err += "\n*Name";
   }
 
@@ -28,17 +28,17 @@ function valInputData(name, email, phone, quote, inquiry) {
     err += "\n*Email";
   }
 
-  if (isEmpty(phone) == true) {
+  if (isEmpty(phone)) {
     err += "\n*Phone Number";
   }
-  if (isEmpty(inquiry) == true) {
-    err += "\n*Explain to us what you are contacting us about!";
+  if (isEmpty(inquiry)) {
+    err += "\n*Reason for Contact";
   }
-  if (isEmpty(quote) == true) {
-    err += "\n*Explain to us what you would like!";
+  if (isEmpty(quote)) {
+    err += "\n*Message";
   }
 
-  if (err != "") {
+  if (err !== "") {
     err = "The following fields are invalid:\n" + err;
     toastr.error(err);
 
@@ -49,7 +49,7 @@ function valInputData(name, email, phone, quote, inquiry) {
 }
 
 function isEmpty(val) {
-  return $.trim(val).length == 0;
+  return $.trim(val).length === 0;
 }
 
 function validateEmail(email) {
@@ -76,21 +76,21 @@ function postQuote(name, email, phone, quote, inquiry) {
     data: JSON.stringify(form_data),
     contentType: "application/json",
     success: function (response) {
-      $("#txtName").val("");
-      $("#txtEmail").val("");
-      $("#txtPhone").val("");
-      $("#txtQuote").val("");
-      $("#txtInquiry").val("");
-      toastr.success("Form Successfully Submitted Message");
-      $("#btnSubmit")
-        .prop("disabled", true)
-        .html("Submit <i class='bi bi-arrow-right'></i>"); // Reset button text
+      $("#modernTxtName").val("");
+      $("#modernTxtEmail").val("");
+      $("#modernTxtPhone").val("");
+      $("#modernTxtQuote").val("");
+      $("#modernTxtInquiry").val("");
+      toastr.success("Form Successfully Submitted!");
+      $("#modernBtnSubmit")
+        .prop("disabled", false)
+        .html("Submit <i class='bi bi-arrow-right'></i>");
     },
     error: function (error) {
-      toastr.error("Error");
-      $("#btnSubmit")
+      toastr.error("Error submitting the form. Please try again.");
+      $("#modernBtnSubmit")
         .prop("disabled", false)
-        .html("Submit <i class='bi bi-arrow-right'></i>"); // Reset button text
+        .html("Submit <i class='bi bi-arrow-right'></i>");
     },
   });
 }
