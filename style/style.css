@@ -135,7 +135,10 @@ html {
   font-weight: 400;
 }
 .grey {
-  color: #b0b0b0;
+  color: #8c8c8c;
+}
+.dark-grey {
+  color: #5c5c5c; /* Dark grey for better contrast */
 }
 .arrow a {
   text-decoration: none; /* Remove underline */
@@ -208,6 +211,12 @@ html {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.custom-line2 {
+  border: none;
+  border-top: 0.3px solid #b0b0b0; /* Light grey color */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
 .d-flex.justify-content-lg-start {
   justify-content: flex-start;
 }
@@ -217,4 +226,15 @@ html {
   .d-flex.justify-content-lg-start {
     justify-content: center;
   }
+}
+.card {
+  transform: scale(1); /* Default size */
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly grow the card */
+}
+.skill-list {
+  font-size: 13px;
 }
