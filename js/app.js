@@ -1,5 +1,6 @@
 $(document).ready(function () {
   var lastScrollTop = 0; // Track the last scroll position
+  const navLinks = $(".nav-link");
   $(".navbar").addClass("hidden");
 
   $(window).on("scroll", function () {
@@ -11,6 +12,7 @@ $(document).ready(function () {
     } else {
       // User is at the top of the page, hide the navbar
       $(".navbar").removeClass("visible").addClass("hidden");
+      navLinks.removeClass("active-link");
     }
   });
 

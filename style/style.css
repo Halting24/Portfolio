@@ -158,7 +158,7 @@ html {
   font-size: 16px;
 }
 .container-padding {
-  padding-top: 210px;
+  padding-top: 180px;
 }
 .custom-line {
   border: none;
@@ -359,4 +359,44 @@ html {
   border: 1px solid #7c7c7c; /* Light grey border */
   /* Rounded corners for a modern look */
   padding: 30px; /* Add padding inside the border */
+}
+.footer {
+  background-color: var(--black-color); /* Match the website's background */
+  border-top: 1px solid #7c7c7c; /* Light grey border at the top */
+}
+
+.footer a {
+  text-decoration: none; /* Remove underline */
+  color: var(--primary-color); /* Keep the primary color for the icons */
+  font-size: 1.2rem; /* Adjust icon size */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.footer a:hover {
+  color: white; /* Change to white on hover */
+}
+
+.footer p {
+  margin: 0; /* Remove default margin */
+  font-size: 0.9rem; /* Match text size with the rest of the site */
+}
+.nav-link {
+  color: white; /* Ensure the default color is white */
+  text-decoration: none; /* Remove underline */
+}
+
+.nav-link:focus,
+.nav-link:active {
+  color: white; /* Keep the color white when clicked or focused */
+  text-decoration: none; /* Ensure no underline appears */
+  outline: none; /* Remove the default focus outline */
+}
+.nav-link {
+  color: white; /* Default color */
+  text-decoration: none;
+}
+
+.nav-link.active-link {
+  color: var(--primary-color); /* Turn red for the active link */
+  font-weight: bold; /* Optional: Make it bold */
 }
