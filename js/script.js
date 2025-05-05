@@ -64,11 +64,13 @@ function postQuote(name, email, phone, quote, inquiry) {
     Email: email,
     Phone: phone,
     Quote: quote,
-    Token: "34c2f50c9e7f4d35a2f23dbcefe16bbfeedd947b0aa741d088aac981de29ec05",
+    Token:
+      "7cdac7cf9bf34ea8a6122d5d4728c427f34d4ee990b647e87b0dfb71c96433590412b67927d9dfe386ebf0f74728c427f34d4ee990b647",
     Inquiry: inquiry,
   };
 
-  var posturl = "https://localhost:7132/api/email/quote";
+  var posturl =
+    "https://contactformapi-gjhxcbarb2bvanat.canadacentral-01.azurewebsites.net/api/email/quote";
 
   $.ajax({
     url: posturl,
@@ -83,7 +85,7 @@ function postQuote(name, email, phone, quote, inquiry) {
       $("#modernTxtInquiry").val("");
       toastr.success("Form Successfully Submitted!");
       $("#modernBtnSubmit")
-        .prop("disabled", false)
+        .prop("disabled", true)
         .html("Submit <i class='bi bi-arrow-right'></i>");
     },
     error: function (error) {
