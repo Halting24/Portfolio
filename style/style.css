@@ -400,3 +400,27 @@ html {
   color: var(--primary-color); /* Turn red for the active link */
   font-weight: bold; /* Optional: Make it bold */
 }
+
+@media (max-width: 991px) {
+  .phone-margin {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .container-padding {
+    padding-top: 140px; /* Adjust for smaller screens */
+  }
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+.navbar-toggler {
+  border: 1px solid white; /* White border */
+  outline: none; /* Remove the default focus outline */
+  box-shadow: none; /* Remove any focus shadow */
+}
+
+.navbar-toggler:focus {
+  outline: none; /* Ensure no focus outline appears */
+  box-shadow: none; /* Ensure no focus shadow appears */
+}
