@@ -424,3 +424,17 @@ html {
   outline: none; /* Ensure no focus outline appears */
   box-shadow: none; /* Ensure no focus shadow appears */
 }
+.skill-box2 {
+  display: inline-block; /* Ensure the boxes are inline */
+  background-color: var(
+    --primary-color-opacity
+  ); /* Lightened primary color for the background */
+  color: var(--primary-color); /* Primary color for the text */
+  padding: 5px 10px; /* Add padding for spacing */
+  margin: 5px; /* Add margin between boxes */
+  border-radius: 10px; /* Slightly rounded corners */
+  text-align: center; /* Center the text */
+  font-weight: 500; /* Slightly bold text */
+  font-size: 0.9rem; /* Adjust font size */
+  white-space: nowrap; /* Prevent text wrapping */
+}
