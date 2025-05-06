@@ -8,10 +8,10 @@ $(document).ready(function () {
 
     if (currentScrollTop > 0) {
       // User has scrolled down, show the navbar
-      $(".navbar").removeClass("hidden").addClass("visible");
+      // $(".navbar").removeClass("hidden").addClass("visible");
     } else {
       // User is at the top of the page, hide the navbar
-      $(".navbar").removeClass("visible").addClass("hidden");
+      // $(".navbar").removeClass("visible").addClass("hidden");
       navLinks.removeClass("active-link");
     }
   });

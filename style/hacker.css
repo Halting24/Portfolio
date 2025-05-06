@@ -1,0 +1,99 @@
+/* Terminal Container */
+:root {
+  --hero-color: rgba(0, 0, 0, 0.763);
+}
+.terminal-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensure header stays at the top */
+  align-items: center;
+  height: 100vh;
+  width: 100%; /* Black background */
+  color: #00ff00; /* Green text */
+  font-family: "Courier New", Courier, monospace;
+  padding: 0; /* Remove extra padding */
+  overflow: hidden;
+}
+.body-terminal-bg {
+  background: url("images/your-background-image.jpg") no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden; /* Prevent scrolling when the terminal is active */
+}
+
+.terminal-header {
+  display: flex;
+  justify-content: left;
+  padding: 10px;
+  background-color: #333;
+  width: 100%;
+  position: sticky; /* Ensure it stays at the top */
+  top: 0;
+}
+
+.terminal-body {
+  display: flex;
+  flex-grow: 1; /* Take up remaining space */
+  justify-content: left; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #00ff00; /* Green text */
+  overflow-y: auto;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.terminal-dot.red {
+  background-color: #ff5f56;
+}
+
+.terminal-dot.yellow {
+  background-color: #ffbd2e;
+}
+
+.terminal-dot.green {
+  background-color: #27c93f;
+}
+
+.terminal-line {
+  margin: 0; /* Remove any default margin */
+  padding: 0; /* Remove any default padding */
+  white-space: pre-wrap; /* Preserve spaces and line breaks */
+}
+#main-content {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 1.5s ease-in-out; /* Smooth fade-in effect */
+}
+
+#main-content.visible {
+  opacity: 1; /* Fully visible */
+}
+@media (max-width: 992px) {
+  .terminal-container {
+    display: none; /* Hide the terminal */
+  }
+
+  #main-content {
+    display: block !important; /* Ensure main content is always visible */
+  }
+}
+
+/* Show terminal on large screens */
+@media (min-width: 993px) {
+  .terminal-container {
+    display: flex; /* Show the terminal */
+  }
+
+  #main-content {
+    display: none; /* Hide main content initially */
+  }
+}

@@ -3,9 +3,10 @@
   --primary-color-opacity: rgb(252, 16, 16, 0.1); /* Primary blue */
   --secondary-color: white; /* Secondary grey */
   --black-color: rgb(24, 23, 23);
+  --bash-font: "Ubuntu Mono", "Courier New", monospace; /* Bash-style font */
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: var(--bash-font);
   background-color: var(--black-color);
 }
 html {
@@ -90,7 +91,7 @@ html {
   font-weight: 400;
 }
 .grey {
-  color: #9a9898;
+  color: #c5c3c3;
 }
 .dark-grey {
   color: #5c5c5c; /* Dark grey for better contrast */
@@ -155,7 +156,7 @@ html {
 
 .text-xxs {
   /* Equivalent to fs-6 (16px) */
-  font-size: 16px;
+  font-size: 18px;
 }
 .container-padding {
   padding-top: 180px;
@@ -437,4 +438,38 @@ html {
   font-weight: 500; /* Slightly bold text */
   font-size: 0.9rem; /* Adjust font size */
   white-space: nowrap; /* Prevent text wrapping */
+}
+terminal-wrap {
+  padding: 20px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.terminal-prefix {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+.typewriter {
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  animation: typing 4s steps(35, end) 1s forwards, blink 0.75s step-end infinite;
+  display: inline-block;
+  max-width: 0;
+}
+
+@keyframes typing {
+  from {
+    max-width: 0;
+  }
+  to {
+    max-width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
 }
