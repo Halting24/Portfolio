@@ -1,7 +1,7 @@
 $(document).ready(function () {
   var lastScrollTop = 0; // Track the last scroll position
   const navLinks = $(".nav-link");
-  $(".navbar").addClass("hidden");
+  // $(".navbar").addClass("hidden");
 
   $(window).on("scroll", function () {
     var currentScrollTop = $(this).scrollTop();
