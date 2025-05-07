@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const introMessage = "Attempting unauthorized access...";
-  const binaryMessage = "101010001010101100 10101000101101010011010101";
+  const binaryMessage = "10101000101010110010101000101101010011010101";
   const finalMessage = "ACCESS GRANTED: YOU'RE IN. ENJOY";
 
   const welcomeElement = document.getElementById("welcome-message");
