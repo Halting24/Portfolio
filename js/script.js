@@ -71,7 +71,7 @@ function postQuote(name, email, phone, quote, inquiry) {
 
   var posturl =
     "https://contactformapi-gjhxcbarb2bvanat.canadacentral-01.azurewebsites.net/api/email/quote";
-
+ 
   $.ajax({
     url: posturl,
     type: "POST",
